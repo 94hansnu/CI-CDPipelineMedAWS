@@ -7,10 +7,7 @@ import lombok.Setter;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Setter
-@Getter
-@AllArgsConstructor
-@NoArgsConstructor
+
 @Document(collection="todos")
 public class TodoDTO {
 
@@ -27,6 +24,10 @@ public class TodoDTO {
         this.description = description;
         this.completed = completed;
         this.assignedTo = assignedTo;
+    }
+
+    public TodoDTO() {
+
     }
 
     public String getId() {
