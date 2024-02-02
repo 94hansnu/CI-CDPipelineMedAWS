@@ -27,6 +27,10 @@ jobs:
         chmod +x mvnw
         ./mvnw clean package -DskipTests=false
 
+    - name: Run unit tests
+      run: |
+        ./mvnw test
+
     - name: Start MongoDB
       uses: supercharge/mongodb-github-action@v1
       with:
