@@ -11,8 +11,10 @@ public class Application {
 	public static void main(String[] args) {
 		ConfigurableApplicationContext context = SpringApplication.run(Application.class, args);
 
+
 		Menu menu = context.getBean(Menu.class);
 		menu.displayMenu();
 	}
+
 
 }
