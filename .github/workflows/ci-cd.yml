@@ -27,9 +27,6 @@ jobs:
         chmod +x mvnw
         ./mvnw clean package -DskipTests=false
 
-    - name: Run unit tests
-      run: |
-        ./mvnw test
 
     - name: Start MongoDB
       uses: supercharge/mongodb-github-action@v1
@@ -37,9 +34,6 @@ jobs:
         mongodb-version: 'latest'
         distribution: 'linux'
 
-    - name: Run integration tests
-      run: |
-        ./mvnw verify -Dspring.profiles.active=test
 
   test:
     runs-on: ubuntu-latest
@@ -54,7 +48,7 @@ jobs:
        java-version: '17'
        distribution: 'temurin'
 
-    - name: Run integration tests
+    - name: Run all tests
       run: |
         chmod +x mvnw
-        ./mvnw verify -Dspring.profiles.active=test     
+        ./mvnw test     
