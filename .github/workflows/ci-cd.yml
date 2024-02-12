@@ -56,4 +56,5 @@ jobs:
 
     - name: Run integration tests
       run: |
+        chmod +x mvnw
         ./mvnw verify -Dspring.profiles.active=test     
