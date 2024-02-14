@@ -1,17 +1,16 @@
 package com.example.CI.CDPipelineMedAWS.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.MongoId;
 
 
-@Document(collection="todos")
+@Document (collection="todos")
 public class TodoDTO {
 
-    @Id
+    @MongoId
+    //@Id
     private String id;
     private String todo;
     private String description;
