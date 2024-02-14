@@ -65,6 +65,7 @@
 				</configuration>
 			</plugin>
 		</plugins>
+		<finalName>webservice-app</finalName>
 	</build>
 
 </project>
