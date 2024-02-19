@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Component
-public class MenuHelper {
+public class MenuHelper { // --> Klass som hanterar de olika CRUD - metoderna
     @Autowired
     private TodoService todoService;
 

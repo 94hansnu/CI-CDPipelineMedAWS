@@ -34,7 +34,7 @@ public class TodoService {
             throw new EmptyResultDataAccessException("Todo not found with id " + id, 1);
         }
 
-        updatedTodo.setId(id); // Ensure the updatedTodo has the correct ID
+        updatedTodo.setId(id);
         TodoDTO result = todoRepo.save(updatedTodo);
         return result;
     }

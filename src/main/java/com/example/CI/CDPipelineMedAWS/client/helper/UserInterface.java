@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Scanner;
 
 @Component
-public class UserInterface {
+public class UserInterface {  // --> Klass för att undvika massa system.out och scanner
     private final Scanner scanner;
 
     public UserInterface() {
