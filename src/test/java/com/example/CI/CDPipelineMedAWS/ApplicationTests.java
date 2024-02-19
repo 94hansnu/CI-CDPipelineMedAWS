@@ -53,7 +53,7 @@ class ApplicationTests {
 	@Test
 	public void testSaveTodo() {
 		// Mocka data och verifiera att rätt metod anropas
-		TodoDTO todoToSave = new TodoDTO("uppgift", "Beskrivning", false, "Användare");
+		TodoDTO todoToSave = new TodoDTO("städa", "köket", false, "test");
 		when(todoRepository.save(todoToSave)).thenReturn(todoToSave);
 		TodoDTO result = todoService.saveTodo(todoToSave);
 		assertEquals(todoToSave, result);
@@ -63,7 +63,7 @@ class ApplicationTests {
 	public void testUpdateTodoById() {
 		// Mocka data och verifiera att rätt metod anropas
 		String todoId = "1";
-		TodoDTO updatedTodo = new TodoDTO("Uppdaterad Uppgift", "Uppdaterad Beskrivning", true, "Uppdaterad Användare");
+		TodoDTO updatedTodo = new TodoDTO("handla", "mat", true, "test2");
 		when(todoRepository.existsById(todoId)).thenReturn(true);
 		when(todoRepository.save(updatedTodo)).thenReturn(updatedTodo);
 		TodoDTO result = todoService.updateTodoById(todoId, updatedTodo);
